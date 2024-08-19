@@ -6,7 +6,7 @@ export default function Form({ onAddItems }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    //console.log(e);
+    //console.log(e);;
 
     if (!description) return;
 
