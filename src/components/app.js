@@ -30,6 +30,13 @@ export default function App() {
     );
   }
 
+  function handleClearItems() {
+    const confirmMsg = window.confirm(
+      "Are you sure to delete all of the items ?"
+    );
+    if (confirmMsg) setItems([]);
+  }
+
   return (
     <div className="app">
       <Logo />
@@ -38,6 +45,7 @@ export default function App() {
         items={items}
         onDeleteItems={handleDeleteItems}
         onToggleItems={handleToggleItems}
+        onClearItems={handleClearItems}
       />
       <Stats items={items} />
     </div>
